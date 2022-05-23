@@ -1,0 +1,59 @@
+<html>
+<head>
+<style>
+.container {
+display: grid;
+width: 600px;
+height:150px;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+grid-template-areas:
+"red_box blue_box blue_box	"
+"yellow_box yellow_box cyan_box";
+}
+.blue_box {
+border-radius: 10px;
+grid-area: blue_box;
+background-color: orange;
+}
+.yellow_box {
+border-radius: 10px;
+grid-area: yellow_box;
+background-color: gray;
+}
+.cyan_box {
+border-radius: 10px;
+grid-area: cyan_box;
+background-color: cyan;
+}
+.red_box {
+border-radius: 10px;
+grid-area: red_box;
+background-color: green;
+}
+@media screen and (max-width: 1000px) {
+.container{
+margin: auto;
+padding: 10px;
+display: grid;
+width: 600px;
+height: 150px;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr;
+
+grid-template-areas:
+"blue_box blue_box"
+"red_box cyan_box"
+"yellow_box yellow_box" ;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="red_box">GREEN BOX</div>
+<div class="blue_box">ORANGE BOX</div>
+<div class="yellow_box">GRAY BOX</div>
+<div class="cyan_box">CYAN BOX</div>
+</div>
+</body>
+</html>
